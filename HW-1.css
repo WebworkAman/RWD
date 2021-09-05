@@ -1,0 +1,177 @@
+@import url('Reset.css');
+
+
+.frame{
+    display:flex;
+    background-color:gainsboro;
+    padding:30px;
+    width: auto;
+}
+.logo{
+    /* flex:none; */
+    width:200px;
+    text-align: center;
+}
+.menu{
+    display:flex;
+    justify-content:flex-end;
+    flex:auto;
+
+}
+.menu img{
+    display: none;
+}
+.item{
+    justify-content: flex-end;
+    margin-right:40px;
+}
+nav{
+    display: none;
+}
+main{
+    background-color:rgb(100, 125, 129);
+    display: flex;
+    width:100%;
+    height:400px;
+    justify-content: center;
+    align-items:center;
+
+}
+h1{
+    font-size:36px;
+    font-weight: bold;
+}
+
+h2{
+    font-size:24px;
+    font-weight: bold;
+    margin: 30px;
+    text-align: center;
+}
+
+section{
+    width:1200px;
+    margin:0 auto;
+}
+ul{
+    display: flex;
+    flex-wrap:wrap;  
+    justify-content: center;
+}
+
+.box{
+    background-color:rgb(146, 178, 192);
+    border:1px solid black;
+    width:45%;
+    height:200px;
+    margin: 10px;
+    align-items: center;
+    text-align: center;
+    padding-top: 10px;
+    
+}
+.call{
+    text-align: center;
+    margin: 30px;
+}
+button{
+    border: 0;
+    background-color: cornflowerblue;
+    width: 100px;
+    height: 45px;
+      
+}
+
+/* 要求二：螢幕寬度 > 800px 而且 < 1250px */
+
+@media (min-width:800px) and (max-width:1250px){
+   
+    section{
+        width: 100%;
+    }
+    
+    }
+
+
+/* 要求三：螢幕寬度 > 500px 而且 < 800px */
+
+@media (min-width:500px) and (max-width:800px){
+    .menu img{
+        display:block;
+        width: 30px;
+    }
+    nav{
+        background-color:whitesmoke;
+        display: none;
+        position:fixed;
+        width: 60%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        
+    }
+   .nav-block{
+       flex-direction: column;
+   }
+   .item1{
+       margin-top:30px;
+       margin-left: 20px;
+   }
+   .nav_img{
+       float: right;
+       width: 30px;
+       margin-top: 10px;
+       margin-right: 10px;
+   }
+    .item{
+        display: none;
+    }
+   
+    section{
+        width: 100%;
+    }
+    
+    }
+
+    /* 要求三：螢幕寬度 < 500px  */
+
+    @media (max-width:500px){
+        .menu img{
+            display:block;
+            width: 30px;
+        }
+        .item{
+            display: none;
+        }
+        nav{
+            background-color:whitesmoke;
+            display: none;
+            position:fixed;
+            width: 60%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            
+        }
+       .nav-block{
+           flex-direction: column;
+       }
+       .item1{
+           margin-top:30px;
+           margin-left: 20px;
+       }
+       .nav_img{
+           float: right;
+           width: 30px;
+           margin-top: 10px;
+           margin-right: 10px;
+       }
+        section{
+            width: 100%;
+        }
+        .section-block{
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <meta charset="UTF-8"/>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="HW-1.css"/>
+    </head>
+    <body>
+        <header class="frame">
+            <div class="logo">Website/Logo</div>
+            <ul class="menu">
+                <img class="menu_img"src="./menu.png">
+                <li class="item">Item 1</li>
+                <li class="item">Item 2</li>
+                <li class="item">Item 3</li>
+                <li class="item">Item 4</li>
+            </ul>
+        </header>
+         <nav>
+            <img class="nav_img"src="./error.png">
+             <ul class='nav-block'>
+                
+                <li class="item1">Item 1</li>
+                <li class="item1">Item 2</li>
+                <li class="item1">Item 3</li>
+                <li class="item1">Item 4</li>
+             </ul> 
+             
+         </nav>
+        <main class="change">
+            <h1>Welcome Message</h1>
+        </main>
+
+            <h2>Section Title</h2>
+
+        <section>
+            <ul class="section-block">
+                <li class="box">Content Box1</li>
+                <li class="box">Content Box2</li>
+                <li class="box">Content Box3</li>
+                <li class="box">Content Box4</li>
+            </ul>
+        </section>
+        <div class="call">
+            <button>Call to Action</button>
+        </div>
+         <script>
+        
+         var my_el= document.getElementsByClassName("change")[0];
+        
+        my_el.addEventListener('click',function(event){
+            my_el.innerHTML = "<h1>Have a Good time</h1>";
+        });  
+        my_el.addEventListener('mouseleave',function(event){
+            my_el.innerHTML = "<h1>Welcome Message</h1>";
+        });   
+         </script>
+         <script>
+             var menu_click =document.getElementsByClassName("menu_img")[0];
+             var menu_apper = document.getElementsByTagName("nav")[0];
+             var menu_cancel = document.getElementsByClassName('nav_img')[0];
+             menu_click.addEventListener('click',function(event){
+                  menu_apper.style.display= "block";
+             })
+             menu_cancel.addEventListener('click',function(e){
+                menu_apper.style.display= "none";
+             })
+         </script>
+    </body>
+   
+</html>   
